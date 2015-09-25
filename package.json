@@ -1,7 +1,7 @@
 {
   "name": "driven",
   "version": "0.0.0",
-  "description": "A Simple CLI for rapidly building APIs and Mocks based on Waterline.",
+  "description": "An unassuming but opinionated framework for building realtime APIs",
   "scripts": {
   },
   "repository": {
@@ -13,7 +13,7 @@
   },
   "keywords": [
     "driven",
-    "api",
+    "api"
   ],
   "author": "Chris Thoburn and driven contributors",
   "license": "MIT",
