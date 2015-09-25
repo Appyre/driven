@@ -51,16 +51,49 @@ Carefully chosen concepts delineate your APIs concerns and fit into an
 approachable file organization that lets new developers level up quickly.
 
 
+
+## Versioning
+
+Need to build a new version of your API?  You can easily create and use versions
+to namespace your Endpoints and Actions.
+
+
+
 ## View Aware
 
 Model based APIs are useful, but in order to eek that last bit of performance out of
 your application you often need to reduce the number of API calls you make at once.
 
-`Driven` comes with three ways to help you reduce API request.
+In addition to WebSocket support, `Driven` comes with two ways to help you reduce
+the number of requests it takes to get the data you need.
 
-### Sideloading
+#### Sideloading via `includes`
+
+See [fetching-includes](http://jsonapi.org/format/#fetching-includes)
 
 
+#### View based coalescing
+
+Each api `version` namespace includes a special `view` action by default.
+A POST Request to this action with a JSON object let's you perform multiple `GET` actions at once.
+
+Your JSON Object should contain an object with a single `urls` property. The payload returned
+from this endpoint will be the coalesced version of the returns from each of the included URLs.
+
+Meta and links from each endpoint are preserved.
+
+```
+POST api/<version>/view
+
+{
+  urls: [
+     foo/bar?includes[],
+     ham/eggs?page[]
+  ]
+}
+```
+
+#### 
 
 
 ## RealTime
