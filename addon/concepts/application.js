@@ -1,4 +1,4 @@
-import Logger from './lib/logger';
+import Logger from '../lib/logger';
 import Express from 'express';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';

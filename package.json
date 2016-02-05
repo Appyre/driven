@@ -2,8 +2,7 @@
   "name": "driven",
   "version": "0.0.0",
   "description": "An unassuming but opinionated framework for building realtime APIs",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/appyre/driven.git"
@@ -22,5 +21,8 @@
   },
   "bundledDependencies": [],
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "rsvp": "^3.1.0",
+    "standard-http-error": "^1.1.1"
+  }
 }
