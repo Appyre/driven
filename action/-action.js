@@ -2,11 +2,12 @@ const Request = require('./-request');
 const Response = require('./-response');
 const chalk = require('chalk');
 const Validator = require('jsonapi-validator').Validator;
-const Schema = require('./schema.json');
-const validator = new Validator(Schema);
-const path = require('path');
 const inject = require('../core/entanglement/inject');
 const CoreObject = require('../core/core-object');
+const path = require('path');
+
+const Schema = require('./schema.json');
+const validator = new Validator(Schema);
 
 module.exports = class Action extends CoreObject {
   init() {
@@ -23,7 +24,7 @@ module.exports = class Action extends CoreObject {
       response.status(500, e.message);
     } finally {
       let payload = response.finalize();
-      // validateJsonApi(payload);
+      validateJsonApi(payload);
     }
   }
 

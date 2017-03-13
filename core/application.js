@@ -16,6 +16,7 @@ class Application {
 
     if (config.LOG.LOG_APP_BOOT) {
       this.logger.info('Booting ' + config.name, 'version ' + config.VERSION);
+      this.logger.info('Environment', config.environment);
     }
 
     if (config.LOG.LOG_EXPRESS) {

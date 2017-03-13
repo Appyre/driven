@@ -32,7 +32,7 @@ module.exports = class Resolver {
   }
 
   get frameworkPath() {
-    return this._frameworkPath || (this._frameworkPath = path.join(this.appPath, '../-framework'));
+    return this._frameworkPath || (this._frameworkPath = path.join(this.projectPath, 'node_modules/driven'));
   }
 
   glob(name) {

@@ -1,4 +1,6 @@
-const chalk = require('chalk');
+const Chalk = require('chalk');
+process.env.FORCE_COLOR = true;
+const chalk = new Chalk.constructor({ enabled: true });
 
 module.exports = {
   name: 'request-logger',
